@@ -1,0 +1,38 @@
+body{
+    background-color: #ccc;
+}
+
+.jumbotron{
+    overflow: hidden;
+}
+
+h1.judul{
+    font-weight: bold;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+.garis{
+    width: 300px;
+    background-color: #000;
+    border-width: 3px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
+
+section{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+footer{
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+}
+
+.berita{
+    border-style: groove;
+    border-radius: 20px;
+    padding: 20px;
+}
