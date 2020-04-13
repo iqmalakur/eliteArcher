@@ -1,38 +1,230 @@
-body{
-    background-color: #ccc;
+/* Navbar */
+.navbar{
+    transition: .5s;
 }
 
+.navbar-brand{
+    font-size: 32px;
+}
+
+.logo{
+    width: 45px;
+    margin-top: -10px;
+    margin-right: 5px;
+}
+
+div.jumbotron a img.logo{
+    margin-bottom: -10px;
+    margin-left: 5px;
+}
+
+/* Jumbotron */
 .jumbotron{
+    background-image: url(../img/bg/bg1.jpg);
+    background-size: cover;
+    height: 540px;
+    text-align: center;
+    position: relative;
     overflow: hidden;
 }
 
-h1.judul{
+.jumbotron .container{
+    position: relative;
+    z-index: 1;
+}
+
+.jumbotron::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+
+.jumbotron .display-4{
+    color: #fff;
+    margin-top: 150px;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.jumbotron .display-4 span{
+    font-weight: 500;
+}
+
+/* Info Panel */
+.info-panel{
+    box-shadow: 0 3px 20px rgba(0,0,0,0.5);
+    border-radius: 12px;
+    background-color: #fff;
+    margin-top: -100px;
+    padding: 30px;
+}
+
+.info-panel img{
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.info-panel h4{
+    font-size: 12px;
+    text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
 }
 
-.garis{
-    width: 300px;
-    background-color: #000;
-    border-width: 3px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
-    margin-bottom: 50px;
+.info-panel p{
+    font-size: 10px;
+    color: #4a4a4a;
+    margin-top: -5px;
+    font-weight: 200;
 }
 
-section{
+.colinfo,
+.judul{
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: .5s;
+}
+
+/* Info */
+.info h1{
     margin-top: 100px;
-    margin-bottom: 100px;
 }
 
-footer{
-    padding: 20px;
+.pkiri,
+.pkanan{
+    transform: rotate(45deg) translate(-70px, -50px);
+    opacity: 0; 
+    transition: 1s;
+}
+
+.pkanan{
+    transform: rotate(-45deg) translate(70px, -50px);
+}
+
+.info .content{
+    margin-top: 30px;
+}
+
+/* Gallery */
+.figure{
+    opacity: 0;
+    transform: translate(0, -20px);
+    transition: 1s;
+}
+
+.figure img{
+    cursor: zoom-in;
+}
+
+div.galleryfocus{
+    opacity: 0;
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -99;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+div.galleryfocus img{
+    cursor: zoom-out;
+    width: 500px;
+}
+
+/* Berita */
+
+
+/* Footer */
+footer.copyright{
+    height: 50px;
+    line-height: 50px;
     position: relative;
     bottom: 0;
 }
 
-.berita{
-    border-style: groove;
-    border-radius: 20px;
-    padding: 20px;
+footer.copyright span{
+    color: #acacac;
+    font-size: 18px;
+}
+
+/* Utility */
+.tombol{
+    text-transform: uppercase;
+    border-radius: 40px;
+    padding: 15px;
+}
+
+section{
+    margin-bottom: 100px;
+}
+
+.muncul{
+    opacity: 1;
+    transform: rotate(0) translate(0,0);
+}
+
+/* DEKSTOP VERSION */
+@media (min-width: 992px){
+    .navbar-brand, .nav-link{
+        color: #fff !important;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+    }
+
+    .nav-link{
+        text-transform: uppercase;
+        margin-right: 30px;
+    }
+
+    .nav-link:hover::after{
+        content: '';
+        display: block;
+        border-bottom: 3px solid #0b63dc;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+
+    .info-panel img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .info-panel h4{
+        font-size: 16px;
+    }
+
+    .info-panel p{
+        font-size: 14px;
+    }
+
+    .jumbotron{
+        margin-top: -75px;
+        height: 640px;
+    }
+
+    .jumbotron .display-4{
+        font-size: 62px;
+    }
+
+    .workingspace{
+        text-align: left;
+    }
+    
+    .testimonial h5{
+        font-size: 32px;
+    }
 }
