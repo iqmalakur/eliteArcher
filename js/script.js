@@ -2,15 +2,13 @@
 $(window).on('load', function() {
     let wScroll = $(this).scrollTop()
     
-    if (wScroll > 0) {
-        $('.colinfo').each(function (i) {
-            setTimeout(function () {
-                $('.colinfo').eq(i).addClass('muncul')
-            }, 300 * i);
-        })
-    }
+    $('.colinfo').each(function (i) {
+        setTimeout(function () {
+            $('.colinfo').eq(i).addClass('muncul')
+        }, 300 * i);
+    })
 
-    if (wScroll > $('section.info').offset().top - 300) {
+    if (wScroll > $('section.info').offset().top - 400) {
         $('nav.navbar').addClass('bg-dark')
         $('section.info .judul').addClass('muncul')
         $('section.info .pkiri').addClass('muncul')
@@ -24,6 +22,12 @@ $(window).on('load', function() {
                 $('.figure').eq(i).addClass('muncul')
             }, 300 * i);
         })
+    }
+    
+    if (wScroll > $('section.contact').offset().top - 300) {
+        $('section.contact .judul').addClass('muncul')
+        $('section.contact .col-lg-4').addClass('muncul')
+        $('section.contact .col-lg-6').addClass('muncul')
     }
 })
 
@@ -40,26 +44,12 @@ $(window).scroll(function () {
         'transform': 'translate(0,' + (wScroll / 5.2) + '%)'
     })
 
-    if(wScroll > 0){
-        $('.colinfo').each(function (i) {
-            setTimeout(function () {
-                $('.colinfo').eq(i).addClass('muncul')
-            }, 300 * i);
-        })
-    } else if(wScroll <= 0){
-        $('.colinfo').each(function (i) {
-            setTimeout(function () {
-                $('.colinfo').eq(i).removeClass('muncul')
-            }, 300 * i);
-        })
-    }
-
-    if (wScroll > $('section.info').offset().top - 300){
+    if (wScroll > $('section.info').offset().top - 400){
         $('nav.navbar').addClass('bg-dark')
         $('section.info .judul').addClass('muncul')
         $('section.info .pkiri').addClass('muncul')
         $('section.info .pkanan').addClass('muncul')
-    } else if (wScroll <= $('section.info').offset().top - 300) {
+    } else if (wScroll <= $('section.info').offset().top - 400) {
         $('nav.navbar').removeClass('bg-dark')
         $('section.info .judul').removeClass('muncul')
         $('section.info .pkiri').removeClass('muncul')
@@ -82,6 +72,16 @@ $(window).scroll(function () {
         $('section.berita .judul').addClass('muncul')
     } else if (wScroll <= $('section.berita').offset().top - 500) {
         $('section.berita .judul').removeClass('muncul')
+    }
+
+    if (wScroll > $('section.contact').offset().top - 300) {
+        $('section.contact .judul').addClass('muncul')
+        $('section.contact .col-lg-4').addClass('muncul')
+        $('section.contact .col-lg-6').addClass('muncul')
+    } else if (wScroll <= $('section.contact').offset().top - 500) {
+        $('section.contact .judul').removeClass('muncul')
+        $('section.contact .col-lg-4').removeClass('muncul')
+        $('section.contact .col-lg-6').removeClass('muncul')
     }
 })
 

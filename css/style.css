@@ -1,3 +1,8 @@
+/* Body */
+body{
+    background: url(../img/bg/concrete_seamless.png);
+}
+
 /* Navbar */
 .navbar{
     transition: .5s;
@@ -146,6 +151,17 @@ div.galleryfocus img{
 
 /* Berita */
 
+/* Contact Us */
+section.contact .col-lg-4,
+section.contact .col-lg-6{
+    opacity: 0;
+    transform: translate(-100px, -150px) rotate(45deg);
+    transition: 1s;
+}
+
+section.contact .col-lg-6{
+    transform: translate(100px, -250px) rotate(-45deg);
+}
 
 /* Footer */
 footer.copyright{
@@ -171,7 +187,8 @@ section{
     margin-bottom: 100px;
 }
 
-.muncul{
+.muncul,
+section.contact div.muncul{
     opacity: 1;
     transform: rotate(0) translate(0,0);
 }
