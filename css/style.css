@@ -8,6 +8,12 @@ body{
     transition: .5s;
 }
 
+.nav-item{
+    opacity: 0;
+    transform: translate(0, -50px);
+    transition: 1s;
+}
+
 .navbar-brand{
     font-size: 32px;
 }
@@ -150,6 +156,20 @@ div.galleryfocus img{
 }
 
 /* Berita */
+section.berita img{
+    width: 500px;
+}
+
+.bkiri,
+.bkanan{
+    opacity: 0;
+    transform: translate(-100px, -50px);
+    transition: 1s;
+}
+
+.bkanan{
+    transform: translate(100px, -50px);
+}
 
 /* Contact Us */
 section.contact .col-lg-4,
@@ -193,7 +213,6 @@ section.contact div.muncul{
     transform: rotate(0) translate(0,0);
 }
 
-/* DEKSTOP VERSION */
 @media (min-width: 992px){
     .navbar-brand, .nav-link{
         color: #fff !important;

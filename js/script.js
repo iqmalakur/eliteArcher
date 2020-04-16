@@ -1,6 +1,12 @@
 // Parallax
 $(window).on('load', function() {
     let wScroll = $(this).scrollTop()
+
+    $('.nav-item').each(function (i) {
+        setTimeout(function () {
+            $('.nav-item').eq(i).addClass('muncul')
+        }, 300 * i);
+    })
     
     $('.colinfo').each(function (i) {
         setTimeout(function () {
@@ -23,7 +29,13 @@ $(window).on('load', function() {
             }, 300 * i);
         })
     }
-    
+
+    $('.bItem').each(function (i) {
+        setTimeout(function () {
+            $('.bItem').eq(i).addClass('muncul')
+        }, 300 * i);
+    })
+
     if (wScroll > $('section.contact').offset().top - 300) {
         $('section.contact .judul').addClass('muncul')
         $('section.contact .col-lg-4').addClass('muncul')
@@ -70,8 +82,18 @@ $(window).scroll(function () {
 
     if (wScroll > $('section.berita').offset().top - 300) {
         $('section.berita .judul').addClass('muncul')
+        $('.bItem').each(function (i) {
+            setTimeout(function () {
+                $('.bItem').eq(i).addClass('muncul')
+            }, 300 * i);
+        })
     } else if (wScroll <= $('section.berita').offset().top - 500) {
         $('section.berita .judul').removeClass('muncul')
+        $('.bItem').each(function (i) {
+            setTimeout(function () {
+                $('.bItem').eq(i).removeClass('muncul')
+            }, 300 * i);
+        })
     }
 
     if (wScroll > $('section.contact').offset().top - 300) {
