@@ -42,7 +42,7 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Right on <span>Target</span><br> and <span>Confident</span> with us</h1>
-            <a href="" class="btn btn-primary tombol">Daftar Sekarang<img src="img/logo/target1.png" alt="logo" class="logo"></a>
+            <a href="view/pendaftaran.php" class="btn btn-primary tombol">Daftar Sekarang<img src="img/logo/target1.png" alt="logo" class="logo"></a>
         </div>
     </div>
     <!-- Akhir Jumbotron -->
@@ -222,6 +222,7 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/home.js"></script>
 </body>
 
 </html>
