@@ -132,9 +132,11 @@ a.navbar-brand:hover img{
 
 .figure img{
     cursor: zoom-in;
+    width: 250px;
 }
 
-div.galleryfocus{
+div.galleryfocus,
+div.imgfocus{
     opacity: 0;
     display: none;
     position: fixed;
@@ -149,7 +151,8 @@ div.galleryfocus{
     align-items: center;
 }
 
-div.galleryfocus img{
+div.galleryfocus img,
+div.imgfocus img{
     cursor: zoom-out;
     width: 500px;
 }
@@ -200,7 +203,7 @@ section.contact .col-lg-6{
 }
 
 /* Jadwal */
-section.jadwal table{
+section#jadwal table{
     background-color: rgba(0, 0, 0, .1);
 }
 
@@ -228,16 +231,50 @@ footer.fixed-bottom {
 /* Utility */
 .pendaftaran form,
 #pengurus,
-.jadwal table{
+#jadwal table{
     background-color: rgba(0, 0, 0, .3);
     padding: 20px;
     border-radius: 20px;
+}
+
+.badge img{
+    width: 15px;
+    margin-left: 5px;
+    transition: .5s;
+}
+
+button.badge img.aktif{
+    transform: rotate(-180deg);
+}
+
+.hide{
+    display: none;
+}
+
+div.noHide{
+    display: block;
 }
 
 .tombol{
     text-transform: uppercase;
     border-radius: 40px;
     padding: 15px;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    background: rgba(0,0,0,0.1);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+div.pagination a img{
+    width: 30px;
+}
+
+.pagination a{
+    margin: 0 10px;
 }
 
 section{
@@ -269,6 +306,7 @@ h1.muncul,
 
 section.container{
     margin-top: 150px;
+    min-height: 500px;
 }
 
 @media (min-width: 992px){

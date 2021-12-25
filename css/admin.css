@@ -1,0 +1,85 @@
+/* Login */
+body.admin{
+    background: url(../img/bg/prism.png);
+}
+
+section.login{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.loginform{
+    border-radius: 10px;
+    width: 600px;
+    padding: 10px 30px 30px 30px;
+    background: rgb(79,79,79);
+    box-shadow: 0 0 0 10px rgba(79, 79, 79, .5);
+}
+
+div.loginform form{
+    background: rgba(255, 255, 255, .1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+div.loginform h1,
+div.loginform h2{
+    text-align: center;
+    color: white;
+}
+
+div.loginform a:hover{
+    text-decoration: none;
+}
+
+div.loginform h2{
+    margin-bottom: 30px;
+}
+
+div.loginform hr{
+    border-top: 1px solid white;
+}
+
+div.loginform button[type=submit]{
+    width: 100%;
+}
+
+button.tambah{
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+}
+
+/* Index */
+div.data{
+    background: url(../img/bg/prism.png);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+div.data a{
+    color: white;
+}
+
+.data .item{
+    background: rgba(255, 255, 255, .1);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+div.data .item:hover{
+    background: rgba(255, 255, 255, .2);
+}
+
+/* Gallery */
+tbody tr td img{
+    cursor: zoom-in;
+}

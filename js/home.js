@@ -1,7 +1,15 @@
 // Parallax
 $(window).on('load', function() {
     let wScroll = $(this).scrollTop()
+    let href = window.location.href.split("/")
+    let tujuan = href.slice(-1)[0]
     
+    if (tujuan != "index.php" && tujuan == "#contact") {
+        $('html').animate({
+            scrollTop: $(tujuan).offset().top - 100
+        }, 200, 'easeInOutExpo')
+    }
+
     $('.colinfo').each(function (i) {
         setTimeout(function () {
             $('.colinfo').eq(i).addClass('muncul')
